@@ -17,7 +17,7 @@ keytool -list -keystore {path}/SkladisteKljuceva.keystore
 
 keytool -export -alias RSAsertifikat -keystore {path}/SkladisteKljuceva.keystore -file {path}sertifikat.der
 
-4. Exporting RSA certificate in BASE64 format and displaying the content of keystore:
+4. Encoding RSA certificate in BASE64 format and displaying the content of keystore:
 
 keytool -export -alias RSAsertifikat -keystore {path}sertifikat.der -rfc -file {path}sertifikat.b64
 keytool -printcert -alias RSAsertifikat -v -file {path}sertifikat.b64
