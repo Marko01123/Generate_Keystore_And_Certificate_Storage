@@ -20,6 +20,7 @@ keytool -export -alias RSAsertifikat -keystore {path}/SkladisteKljuceva.keystore
 4. Encoding RSA certificate in BASE64 format and displaying the content of keystore:
 
 keytool -export -alias RSAsertifikat -keystore {path}sertifikat.der -rfc -file {path}sertifikat.b64
+
 keytool -printcert -alias RSAsertifikat -v -file {path}sertifikat.b64
 
 5. Creating a request for a digital signature - CSR (Certificate Signing Request) form.
