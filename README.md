@@ -2,7 +2,7 @@
 Java GUI application for generating keystore and certificate storage. The implementation includes creating a keystore where the user 
 can generate a new AES key and a pair of RSA keys, and display them in a TextArea. After that, the user can export a certificate from the 
 keystore, save it in DER format, and display the certificate. Certificate encoding in Base64 is also implemented. Furthermore, 
-the user can generate a .csr file, certificate signing request.
+the user can generate a .csr file, certificate signing request. Bouncy castle .jar file included in repository.
 
 These are cmd lines that are implemented in this application:
 1. Creating keystore and generating new pair of RSA keys and storing them into keystore
