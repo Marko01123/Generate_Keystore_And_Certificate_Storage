@@ -6,13 +6,22 @@ the user can generate a .csr file, certificate signing request.
 
 These are cmd lines that are implemented in this application:
 1. Creating keystore and generating new pair of RSA keys and storing them into keystore
+
 keytool -genkey -alias RSAPrivatniKljuc -keysize 2048 -v -keyalg RSA -keystore {path}/SkladisteKljuceva.keystore
+
 2. Displaying the content of keystore
+
 keytool -list -keystore {path}/SkladisteKljuceva.keystore
+
 3. Exporting RSA certificate in DER format 
+
 keytool -export -alias RSAsertifikat -keystore {path}/SkladisteKljuceva.keystore -file {path}sertifikat.der
+
 4. Exporting RSA certificate in BASE64 format and displaying the content of keystore:
+
 keytool -export -alias RSAsertifikat -keystore {path}sertifikat.der -rfc -file {path}sertifikat.b64
 keytool -printcert -alias RSAsertifikat -v -file {path}sertifikat.b64
+
 5. Creating a request for a digital signature - CSR (Certificate Signing Request) form.
+
 keytool -certreq -v -alias parKljuceva -keystore {path}/SkladisteKljuceva.keystore -file {path}sertifikat.csr
